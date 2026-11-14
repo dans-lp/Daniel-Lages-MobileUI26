@@ -1,0 +1,133 @@
+.container {
+   display: flex;
+   border: var(--container-border);
+   width: 100%;
+   flex-wrap: wrap;
+}
+
+.header {
+   display: flex;
+   width: 100%;
+   margin: 10px;
+   justify-content: start;
+}
+
+.infos {
+   display: flex;
+   width: 100%;
+   font-size: 0.80em;
+   border: var(--container-border);
+   margin: 10px;
+   justify-content: space-evenly;
+   gap: 8px;
+   flex-wrap: wrap;
+   text-align: center;
+}
+
+.infos p {
+   margin: 4px 4px;
+}
+
+
+.table {
+   width: 100%;
+   margin-bottom: 1rem;
+   margin: 10px;
+   border-collapse: collapse;
+   border: var(--container-border);
+}
+
+th {
+   border-bottom: var(--container-border);
+   padding: 6px 8px;
+   text-align: center;
+}
+
+td {
+   padding: 6px 8px;
+   border-bottom: 2px dashed #cccccc80;
+}
+
+.button {
+   cursor: pointer;
+   border-color: #ff362b66;
+   border-radius: 3px;
+}
+
+.button:hover {
+   background: #ff362b52;
+}
+
+.qtyControls {
+   display: inline-flex;
+   align-items: center;
+   gap: 2px;
+}
+
+.cellSubtotal {
+   white-space: wrap;
+}
+
+@media (max-width: 480px) {
+
+   .table thead {
+      display: none;
+   }
+
+   .table {
+      border: none;
+   }
+
+   .table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+   }
+
+   .table tr {
+      border: var(--container-border);
+      margin-bottom: 10px;
+      padding: 6px 0;
+   }
+
+   .table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px dashed #cccccc80;
+      padding: 8px 12px;
+      text-align: right;
+   }
+
+   .table td:last-child {
+      border-bottom: none;
+   }
+
+   .table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      text-align: left;
+   }
+
+   @media(prefers-color-scheme: dark) {
+      .table tr {
+         border-color: #ff362b92;
+      }
+   }
+
+}
+
+@media(prefers-color-scheme: dark) {
+   .container {
+      color: #e8e6e3;
+      background-color: #181a1b;
+   }
+
+   .infos,
+   .table,
+   th {
+      border-color: #ff362b92;
+
+   }
+}

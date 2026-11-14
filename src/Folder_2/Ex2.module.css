@@ -1,0 +1,33 @@
+.container {
+   display: flex;
+   border: var(--container-border);
+   flex-wrap: wrap;
+}
+
+.container * {
+   display: flex;
+}
+
+.menu_horizontal {
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   height: 40px;
+}
+
+.menu_logo {
+   height: 30px;
+   margin-left: 10px;
+}
+
+.menu_items {
+   justify-content: flex-start;
+   flex-direction: column;
+   list-style: none;
+   gap: 10px;
+}
+
+.menu_icon {
+   margin-right: 10px;
+   font-size: 25px;
+}
